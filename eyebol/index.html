@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eyeball</title>
+    <script defer src="main.js"></script>
+
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+
+      main {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        position: relative;
+      }
+
+      #eyes,
+      #eyes img {
+        position: absolute;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <img id="anchor" src="rnm.png" />
+      <div id="eyes">
+        <img src="eye.png" class="eye" style="top: 116px; left: -129px" />
+        <img src="eye.png" class="eye" style="top: 94px; left: -10px" />
+        <img src="eye.png" class="eye" style="top: -141px; right: -199px" />
+        <img src="eye.png" class="eye" style="top: -149px; right: -317px" />
+      </div>
+    </main>
+  </body>
+</html>
