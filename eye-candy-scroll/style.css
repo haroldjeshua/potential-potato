@@ -15,21 +15,45 @@ section {
     min-height: 100vh;
 }
 
+.avatars {
+    display: flex;
+    gap: 1rem;
+}
+
+.avatar {
+    width: 100px;
+    background-color: #6e6e6e;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.avatar:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.avatar:nth-child(3) {
+    transition-delay: 400ms;    
+}
+
+.avatar:nth-child(4) {
+    transition-delay: 600ms;
+}
+
 .hidden {
     opacity: 0;
     filter: blur(5px);
-    transform: (translateX(-100%));
+    transform: translateX(-100%);
     transition: all 1s;
 }
 
 .show {
     opacity: 1;
     filter: blur(0);
-    transform: (translateX(0));
+    transform: translateX(0);
 }
 
-@media(prefers-reduced-motion) {
+/* @media(prefers-reduced-motion) {
     .hidden {
         transition: none;
     }
-}
+} */
