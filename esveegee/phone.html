@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Phone SVG Test</title>
+
+	<style>
+		#backdrop2 {
+			animation: fadeInUp 600ms;
+		}
+
+		#backdrop1 {
+			animation: fadeInUp 400ms;
+		}
+
+		.skeleton {
+			animation: fadeInUp 500ms;
+		}
+
+		@keyframes fadeInUp {
+			from {
+				opacity: 0;
+				transform: translateY(20%);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		#hBox,
+		#aTri,
+		.rPoly,
+		#vTri {
+			opacity: 0;
+			animation: dropIn 4s ease forwards;
+			animation-delay: calc(var(--order) * 200ms);
+		}
+
+		@keyframes dropIn {
+			20% {
+				opacity: 0;
+				transform: translateY(-20%);
+			}
+
+			30%, 100% {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<svg width="200" height="256" viewBox="0 0 200 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<g filter="url(#filter0_d_667_23)">
+			<rect x="36" y="19" width="128" height="200" rx="12" fill="#F5F5F5" />
+		</g>
+		<rect id="backdrop2" x="56" y="76" width="80" height="80" rx="2" fill="#C4B5DD" />
+		<rect id="backdrop1" x="61" y="81" width="80" height="80" rx="2" fill="#E2D1FF" />
+		<rect id="hBox" x="67" y="86" width="32" height="32" rx="2" fill="#B9A8FB" fill-opacity="0.9" style="--order: 1" />
+		<path id="aTri"
+			d="M117.213 87.5602C117.951 86.09 120.049 86.09 120.787 87.5602L134.866 115.603C135.534 116.933 134.567 118.5 133.079 118.5H104.921C103.433 118.5 102.466 116.933 103.134 115.603L117.213 87.5602Z"
+			fill="#7342C6" fill-opacity="0.9" style="--order: 2" />
+		<path class="rPoly"
+			d="M67 122.97C67 122.434 67.4341 122 67.9697 122H91C95.4183 122 99 125.582 99 130V130C99 134.418 95.4183 138 91 138H67V122.97Z"
+			fill="#6C2D87" fill-opacity="0.9" style="--order: 3" />
+		<path class="rPoly"
+			d="M67 138H83L98.5302 151.589C98.8287 151.85 99 152.228 99 152.624V152.624C99 153.384 98.3841 154 97.6243 154H69C67.8954 154 67 153.105 67 152V138Z"
+			fill="#6C2D87" fill-opacity="0.9" style="--order: 3" />
+		<path id="vTri"
+			d="M120.787 152.44C120.049 153.91 117.951 153.91 117.213 152.44L103.134 124.397C102.466 123.067 103.433 121.5 104.921 121.5H133.079C134.567 121.5 135.534 123.067 134.866 124.397L120.787 152.44Z"
+			fill="#6C4DE6" fill-opacity="0.9" style="--order: 4" />
+		<rect class="skeleton" x="136" y="31" width="16" height="4" fill="#D9D9D9" />
+		<rect class="skeleton" x="136" y="37" width="16" height="4" fill="#D9D9D9" />
+		<rect class="skeleton" x="136" y="43" width="16" height="4" fill="#D9D9D9" />
+		<circle class="skeleton" cx="56" cy="39" r="8" fill="#D9D9D9" />
+		<defs>
+			<filter id="filter0_d_667_23" x="28" y="19" width="144" height="216" filterUnits="userSpaceOnUse"
+				color-interpolation-filters="sRGB">
+				<feFlood flood-opacity="0" result="BackgroundImageFix" />
+				<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+					result="hardAlpha" />
+				<feOffset dy="8" />
+				<feGaussianBlur stdDeviation="4" />
+				<feComposite in2="hardAlpha" operator="out" />
+				<feColorMatrix type="matrix" values="0 0 0 0 0.2 0 0 0 0 0.2 0 0 0 0 0.2 0 0 0 0.32 0" />
+				<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_667_23" />
+				<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_667_23" result="shape" />
+			</filter>
+		</defs>
+	</svg>
+</body>
+
+</html>
