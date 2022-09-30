@@ -16,3 +16,21 @@ button.addEventListener("click", () => {
 		}
 	})
 })
+
+let notification
+let interval
+
+document.addEventListener('visibilitychange', () => {
+	if (document.visibilityState === 'hidden') {
+		const leaveDate = new Date()
+		interval = setInterval(() => {
+			notification = new Notification("Don't leave me hanging, bro", {
+				body: `youve been out for ${Math.round(new Date() - leaveDate)} seconds`,
+				tag: 'Come back, bro',
+			})
+		})
+	} else {
+		if (interval) clearInterval(interval)
+		if (notification) notification.close()
+	}
+})
