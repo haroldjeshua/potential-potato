@@ -13,7 +13,7 @@
             <h1>Test Title</h1>
     
             <div class="p-container">
-                <h3>One liners #1: Writing mode: v rl</h3>
+                <code>writing-mode: vertical-rl;</code>
                 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit veritatis dignissimos eius consectetur non doloribus excepturi expedita soluta eveniet natus!</p>
     
@@ -25,11 +25,37 @@
         <a class="button" href="#section2">
             Click me bro!
         </a>
+
+        <div>
+            <p>for smooth scrolling</p>
+            <code>
+                html {
+                    scroll-behavior: smooth;
+                }
+            </code>
+        </div>
+
+        <div>
+            <p>button</p>
+            <code>
+                &lt;a class=&quot;button&quot; href=&quot;#section2&quot;&gt; Click me bro! &lt;/a&gt;
+            </code>
+        </div>
+
+        <div>
+            <p>destination</p>
+            <code>
+                &lt;section class=&quot;section&quot; id=&quot;section2&quot;&gt;&lt;/section&gt;
+            </code>
+        </div>
     </section>
 
     <section class="section" id="section2">
         <div class="image-box">
             <img src="https://source.unsplash.com/random" alt="">
+            <code>
+                transform: scale(-1);
+            </code>
         </div>
     </section>
 
@@ -41,8 +67,34 @@
             <div class="slider">4</div>
             <div class="slider">5</div>
         </div>
+
+        <code>.parent { scroll-snap-type: x mandatory; }</code>
+        <code>.child { scroll-snap-align: center; }</code>
+    </section>
+    
+    <section class="section" id="section4">
+        <div class="box box-resizable">
+            <h3>resize everything</h3>
+            <code>
+                overflow: auto; <br/>
+                resize: both;
+            </code>
+        </div>
+        
+        <div class="box">
+            <h3>tricky truncate</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis magni architecto minima, debitis soluta consequatur recusandae, quas fuga libero ipsum vitae dolorum!</p>
+            
+            <code>
+                p { display: -webkit-box; <br>
+                -webkit-line-clamp: 1; <br>
+                -webkit-box-orient: vertical; <br>
+                overflow: hidden;} 
+            </code>
+        </div>
+        
     </section>
 
-    <a href="#section1" class="button fab">go on top, baby</a>
+    <a href="#section1" class="button fab">go on top</a>
 </body>
 </html>
