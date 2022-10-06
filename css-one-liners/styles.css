@@ -33,9 +33,13 @@ section:first-child {
     background: rgb(163,98,224);
     background: radial-gradient(circle, rgba(163,98,224,1) 0%, rgba(61,42,79,1) 100%);
 }
+section:nth-child(2) {
+    background: rgb(117, 98, 224);
+    background: radial-gradient(circle, rgb(125, 98, 224) 0%, rgb(42, 45, 79) 100%);
+}
 
 section:last-of-type {
-    background: rgb(163,98,224);
+    background: rgb(98, 224, 161);
     background: radial-gradient(circle, rgb(98, 224, 161) 0%, rgb(42, 79, 64) 100%);
 }
 
@@ -98,4 +102,47 @@ section:last-of-type {
     padding: 1rem;
     border-radius: .5rem;
     cursor: pointer;
+}
+
+.button.fab  {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+.sliders {
+    width: 20rem;
+    height: 20rem;
+    background-color: aliceblue;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.sliders .slider {
+    min-width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    color: aliceblue;
+    scroll-snap-align: center;
+}
+
+.slider:nth-child(1) {
+    background-color: blue;
+}
+
+.slider:nth-child(2) {
+    background-color: blueviolet;
+}
+
+.slider:nth-child(3) {
+    background-color: brown;
+}
+.slider:nth-child(4) {
+    background-color: burlywood;
+}
+.slider:nth-child(5) {
+    background-color: chocolate;
 }
