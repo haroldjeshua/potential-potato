@@ -94,7 +94,52 @@
         </div>
         
     </section>
+    
+    <section class="section" id="section5">
+        <h3>Text Gradient</h3>
+
+        <h1>Macbook Pro M1.</h1>
+
+        <code>
+            background: linear-gradient(to right, rgb(0, 110, 255), rgb(3, 238, 247)); <br>
+            background-clip: text; <br>
+            -webkit-background-clip: text; <br>
+            -webkit-text-fill-color: transparent;
+        </code>
+    </section>
+
+    <section class="section" id="section6">
+        <div class="image-box">
+            <img src="https://source.unsplash.com/random" alt="">
+        </div>
+
+        <div class="toggle-check">
+            <input type="checkbox" name="toggle image" id="toggleObjectFit">
+            <label for="toggle image">toggle object fit</label>
+
+        </div>
+        
+        <code>
+            img { object-fit: <span class="image-value">cover</span>; }
+        </code>
+    </section>
 
     <a href="#section1" class="button fab">go on top</a>
+
+    <script>
+        const checkbox = document.querySelector('#toggleObjectFit')
+        const imageToToggle = document.querySelector('#section6 .image-box img')
+        const imageValue = document.querySelector('.image-value')
+
+        checkbox.addEventListener('click', () => {
+            if (!checkbox.checked) {
+                imageToToggle.style.objectFit = "cover"
+                imageValue.textContent = "cover"
+            } else {
+                imageToToggle.style.objectFit = "unset"
+                imageValue.textContent = "unset"
+            }
+        })
+    </script>
 </body>
 </html>
