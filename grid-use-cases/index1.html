@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Grid Use Cases - 02</title>
+
+	<style>
+		body {
+			height: 100vh;
+			width: 100vw;
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+		}
+
+		.featured-gallery {
+			display: grid;
+			gap: 1rem;
+			grid-template-columns: repeat(3, 256px);
+			grid-template-rows: 256px 256px;
+			justify-content: center;
+			align-content: end;
+			margin-top: 2rem;
+		}
+
+		.main-photo {
+			grid-column: 1 / 4;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.main-photo img {
+			width: 100%;
+			max-height: 256px;
+			object-fit: cover;
+		}
+
+		.thumbnail-01 {
+			grid-column: 1;
+			grid-row: 2;
+		}
+
+		.thumbnail-02 {
+			grid-column: 2;
+			grid-row: 2;
+		}
+
+		.thumbnail-03 {
+			grid-column: 3;
+			grid-row: 2;
+		}
+
+		img {
+			width: 256px;
+			height: 100%;
+			border-radius: 10px;
+			object-fit: cover;
+		}
+	</style>
+</head>
+<body>
+	<div class="featured-gallery">
+		<div class="main-photo">
+			<img src="https://source.unsplash.com/random" alt="">
+		</div>
+		<div class="thumbnail-01">
+			<img src="https://source.unsplash.com/random" alt="">
+		</div>
+		<div class="thumbnail-02">
+			<img src="https://source.unsplash.com/random" alt="">
+		</div>
+		<div class="thumbnail-03">
+			<img src="https://source.unsplash.com/random" alt="">
+		</div>
+	</div>
+</body>
+</html>
