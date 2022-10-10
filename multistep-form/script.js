@@ -37,6 +37,7 @@ multiStepForm.addEventListener('click', (e) => {
 
 formSteps.forEach(step => {
     step.addEventListener('animationend', (e) => {
+        formSteps[currentStep].classList.remove('hide')
         step.classList.toggle('hide', !e.target.classList.contains('active'))
     })
 })
@@ -44,6 +45,5 @@ formSteps.forEach(step => {
 function showCurrentStep() {
     formSteps.forEach((step, index) => {
         step.classList.toggle('active', index === currentStep)
-        step.classList.remove('hide')
     })
 }
