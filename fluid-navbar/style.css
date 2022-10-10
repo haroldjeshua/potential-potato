@@ -66,7 +66,7 @@ body {
     }
 
     .navbar-links {
-        /* display: none; */
+        display: none;
         width: 100%;
     }
 
@@ -82,6 +82,14 @@ body {
 
     .navbar-links li {
         text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
     }
 }
 
