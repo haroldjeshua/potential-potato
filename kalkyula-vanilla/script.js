@@ -58,6 +58,9 @@ class Calculator {
     }
 
     getDisplayNumber(number) {
+        const stringNumber = number.toString()
+        const intDigits = parseFloat(stringNumber.split('.')[0])
+        const decimalDigits = stringNumber.split('.')[1]
         const floatNumber = parseFloat(number)
         if (isNaN(floatNumber)) return ''
         return floatNumber.toLocaleString('en')
@@ -67,10 +70,8 @@ class Calculator {
         this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand)
 
         if (this.operation != null) {
-            this.prevOperandTextElement.innerText = `${this.prevOperand} ${this.operation}`
+            this.prevOperandTextElement.innerText = `${this.getDisplayNumber(this.prevOperand)} ${this.operation}`
         }
-
-        this.prevOperandTextElement.innerText = this.prevOperand
     }
 }
 
