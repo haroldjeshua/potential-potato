@@ -4,8 +4,8 @@
     border-radius: 5px;
     padding: 1rem;
     max-width: 256px;
-    margin: 0 auto ;
-    display: none;
+    margin: 0 auto;
+    animation: fadeOut 500ms ease-in-out forwards;
 }
 
 .form-group {
@@ -34,5 +34,40 @@
 }
 
 .card.active {
-    display: block;
+    /* display: block;  */
+    animation: slideIn 500ms 500ms ease-in-out forwards;
+}
+
+.multi-step-form {
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0;
+        transform: scale(.75);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
 }
