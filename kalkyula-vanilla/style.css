@@ -43,6 +43,7 @@ body {
     justify-content: space-around;
     flex-direction: column;
     gap: 1rem;
+    padding: 1rem;
     word-wrap: break-word;
     word-break: break-all;
 }
