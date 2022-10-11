@@ -6,7 +6,7 @@ const LOCAL_STORAGE_LIST_KEY = 'tasks.lists'
 let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || []
 
 newListForm.addEventListener('submit', (e) => {
-    e.prevetDefault()
+    e.preventDefault()
     const listName = newListInput.value
 
     if (listName == null || listName === '') return
