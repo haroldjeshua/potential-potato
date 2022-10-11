@@ -13,10 +13,20 @@ let lists = [
     }
 ]
 
-newListForm.add('submit', (e) => {
+newListForm.addEventListener('submit', (e) => {
     e.prevetDefault()
-    
+    const listName = newListInput.value
+
+    if (listName == null || listName === '') return
+    const list = createList(listName)
+    newListInput.value = null
+    lists.push(list)
+    render()
 })
+
+function createList(name) {
+    return { id: Date.now().toString(), name: name, tasks: [] }
+}
 
 function render() {
     clearElement(listsContainer)
