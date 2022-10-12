@@ -8,3 +8,7 @@
 6. css-one-liners: handful of usefull css snippets for your proj
 7. grid-use-cases: testing css grid samples and experimenting
 8. kalkyula-vanilla: simple calculator in vanilla js
+9. multistep-form: replicate and debugging multi-step-form sample from codepen for js and css animation
+10. fluid-navbar: classic navbar with plain css
+11. dark-mode: dark mode icons with animation + alpine test for markup theme switching
+12. ta-da: a multi-list to-do list, vanillajs + scss
