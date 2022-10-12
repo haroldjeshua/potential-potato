@@ -12,3 +12,4 @@
 10. fluid-navbar: classic navbar with plain css
 11. dark-mode: dark mode icons with animation + alpine test for markup theme switching
 12. ta-da: a multi-list to-do list, vanillajs + scss
+13. theme-switch: in-depth learning for theme switching + using postcss and vite for build setup
