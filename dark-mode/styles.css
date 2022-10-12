@@ -1,0 +1,57 @@
+button {
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    border-radius: 9px;
+    padding: 8px;
+  }
+  
+  .app {
+    --transition-duration: 400ms;
+    --bg: white;
+    --text: #333;
+  }
+  
+  .app.dark {
+    --bg: #333;
+    --text: white;
+  }
+  
+  .app {
+    background-color: var(--bg);
+    min-height: 100vh;
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    transition: color, background-color var(--transition-duration);
+  }
+  
+  .app svg {
+    transition: stroke var(--transition-duration);
+    stroke: var(--text);
+  }
+  
+  .app .moon-icon {
+    stroke-dasharray: 0px 1px;
+    opacity: 0;
+    transition: stroke-dasharray 0.5s ease-in, opacity 300ms ease-in;
+  }
+  
+  .app .sun-icon {
+    stroke-dasharray: 1px 1px;
+    opacity: 1;
+    transition: stroke-dasharray 0.5s ease-in, opacity 300ms ease-in;
+  }
+  
+  .app.dark .moon-icon {
+    stroke-dasharray: 1px 1px;
+    opacity: 1;
+  }
+  
+  .app.dark .sun-icon {
+    stroke-dasharray: 0px 1px;
+    opacity: 0;
+  }
+  
