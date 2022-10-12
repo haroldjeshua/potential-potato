@@ -1,6 +1,6 @@
 @import "theme-toggle.css";
 
-/* @custom-media --motionOK (prefers-reduced-motion: no-preference); */
+@custom-media --motionOK (prefers-reduced-motion: no-preference);
 
 * {
     box-sizing: border-box;
