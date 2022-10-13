@@ -5,7 +5,8 @@ const deleteListButton = document.querySelector('[data-delete-list-button]')
 const listDisplayContainer = document.querySelector('[data-list-display-container]')
 const listTitle = listDisplayContainer.querySelector('[data-list-title]')
 const listCount = listDisplayContainer.querySelector('[data-list-count]')
-const tasks = document.querySelector('[data-tasks]')
+const tasksContainer = document.querySelector('[data-tasks]')
+const taskTemplate = document.querySelector('#task-template')
 
 const LOCAL_STORAGE_LIST_KEY = 'tasks.lists'
 const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = 'tasks.selectedListId'
@@ -54,11 +55,36 @@ function render() {
 	clearElement(listsContainer)
 	renderLists()
 
+	const selectedList = lists.find(list => list.id === selectedListId)
+
 	if (selectedListId == null) {
 		listDisplayContainer.style.display = 'none'
 	} else {
 		listDisplayContainer.style.display = ''
+		listTitle.innerText = selectedList.name
+		renderTaskCount(selectedList)
+		clearElement(tasksContainer)
+		renderTasks(selectedList)
 	}
+}
+
+function renderTasks(selectedList) {
+	selectedList.tasks.forEach(task => {
+		const taskElement = document.importNode(taskTemplate.content, true)
+		const checkbox = taskElement.querySelector('input')
+		checkbox.id = task.id
+		checkbox.checked = task.complete
+		const label = taskElement.querySelector('label')
+		label.htmlFor = task.id
+		label.append(task.name)
+		tasksContainer.appendChild(taskElement)
+	})
+}
+
+function renderTaskCount(selectedList){
+	const incompleteTaskCount = selectedList.tasks.filter(task => !task.complete).length
+	const taskString = incompleteTaskCount === 1 ? "task" : 'tasks'
+	listCount.innerText = `${incompleteTaskCount} ${taskString} remaining`
 }
 
 function renderLists() {
