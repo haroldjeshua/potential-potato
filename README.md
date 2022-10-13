@@ -1,4 +1,5 @@
-# For fun: playground for experimentation on web
+# For fun:
+## playground for experimentation on web
 
 1. eyeball: mouse hover effect
 2. eye-candy-scroll: subtle, animation on scroll
@@ -13,3 +14,6 @@
 11. dark-mode: dark mode icons with animation + alpine test for markup theme switching
 12. ta-da: a multi-list to-do list, vanillajs + scss
 13. theme-switch: in-depth learning for theme switching + using postcss and vite for build setup
+14. panahon-vanilla: weather app with pure js and using weather api + nodejs
+
+https://justforfunnoreally.dev/
