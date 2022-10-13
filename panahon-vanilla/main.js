@@ -10,6 +10,7 @@ let weather = {
         const { icon, description } = data.weather[0]
         const { temp, humidity } = data.main
         const { speed } = data.wind
+
         console.log(name, icon,description, temp, humidity, speed)
 
         document.querySelector('.city').innerText = name
@@ -18,5 +19,24 @@ let weather = {
         document.querySelector('.temp').innerText = temp + "°C"
         document.querySelector('.humidity').innerText = humidity + "%"
         document.querySelector('.wind').innerText = speed + " km/h"
+        document.querySelector('.weather').classList.remove('loading')
+    },
+    search: function() {
+        this.fetchWeather(document.querySelector('.search-bar').value)
     }
 }
+
+const searchBar = document.querySelector('.search-bar')
+const searchButton = document.querySelector('.search button')
+
+searchButton.addEventListener('click', () => {
+    weather.search()
+})
+
+searchBar.addEventListener('keyup', (e) => {
+    if (e.key === 'Enter') {
+        weather.search()
+    }
+})
+
+weather.fetchWeather('Daet')

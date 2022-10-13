@@ -65,6 +65,10 @@ h1.temp {
 	align-items: center;
 }
 
+.city {
+	text-transform: capitalize;
+}
+
 .description {
 	text-transform: capitalize;
 	margin-left: 8px;
