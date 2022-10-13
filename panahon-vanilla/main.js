@@ -2,7 +2,13 @@ let weather = {
     apiKey: '82c16e3433f4ecc1c3426e1332b11ac4',
     fetchWeather: function(city) {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${weather.apiKey}`)
-        .then((res) => res.json())
+        .then((res) => {
+            if (!res.ok) {
+                alert('No weather found.')
+                throw new Error('No weather found.')
+            }
+            return res.json()
+        })
         .then((data) => this.displayWeather(data))
     },
     displayWeather: function(data) {
@@ -20,6 +26,7 @@ let weather = {
         document.querySelector('.humidity').innerText = humidity + "%"
         document.querySelector('.wind').innerText = speed + " km/h"
         document.querySelector('.weather').classList.remove('loading')
+        document.body.style.backgroundImage = `url('https://source.unsplash.com/1600x900/?${name}')`
     },
     search: function() {
         this.fetchWeather(document.querySelector('.search-bar').value)
