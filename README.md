@@ -15,5 +15,6 @@
 12. ta-da: a multi-list to-do list, vanillajs + scss
 13. theme-switch: in-depth learning for theme switching + using postcss and vite for build setup
 14. panahon-vanilla: weather app with pure js and using weather api (openweather) & gmaps/places api + nodejs (separate repo to run in server -> panahon-web)
+15. tiyubibo: vanilla carousel/slideshow w scrollsnap + vanillajs
 
 https://justforfunnoreally.dev/
