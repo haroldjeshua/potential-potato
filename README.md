@@ -14,6 +14,6 @@
 11. dark-mode: dark mode icons with animation + alpine test for markup theme switching
 12. ta-da: a multi-list to-do list, vanillajs + scss
 13. theme-switch: in-depth learning for theme switching + using postcss and vite for build setup
-14. panahon-vanilla: weather app with pure js and using weather api + nodejs
+14. panahon-vanilla: weather app with pure js and using weather api + nodejs (separate repo to run in server -> panahon-web)
 
 https://justforfunnoreally.dev/
