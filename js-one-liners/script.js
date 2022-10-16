@@ -41,7 +41,7 @@ mergedArrays1.forEach((todo) => {
 })
 
 
-// extract from object
+// destructuring / extract from object
 const person = {
     age: 26,
     posts: 128,
