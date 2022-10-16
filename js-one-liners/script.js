@@ -66,14 +66,79 @@ document.body.style.backgroundColor = `#${sampleBackground}`
 const bgText = document.querySelector('.bg-text')
 bgText.textContent = `#${sampleBackground}`
 
-// Copy from clipboard
+
+// Copy to clipboard
 const button = document.querySelector('.button')
 const sampleCopy = document.querySelector('.sample-copy').textContent
 
 button.addEventListener('click', () => {
     copy(sampleCopy)
     alert('Copied to clipboard 🚀')
+    button.style.opacity = 0.5
 })
 
 const copy = text => navigator.clipboard.writeText(text)
 console.log(copy)
+
+
+// transitionend
+button.addEventListener('click', () => button.style.transform = `rotate(-15deg)`)
+
+
+// short if statement
+const user = "jeshua"
+
+const getUserData = () => {
+    // mediocre way
+    // if (user){
+    //     const data = {
+    //         name: 'haroldvarde',
+    //         age: 26,
+    //         avatar: 'https://avatars.dicebear.com/api/avataaars/harold.svg'
+    //     }
+    // } else {
+    //     console.log('no person')
+    // }
+
+    // one liner way
+    if (!user) return
+    const data = {
+        name: 'haroldvarde',
+        age: 26,
+        avatar: 'https://avatars.dicebear.com/api/avataaars/harold.svg'
+    }
+    console.log(data)
+}
+
+console.log(getUserData())
+
+
+// console table
+const instaPosts = [
+    { caption: 'trip to busan', likes: 6969 },
+    { caption: 'on my way to chicago', likes: 1314 },
+    { caption: 'lonely again', likes: 666 },
+]
+
+console.log(instaPosts)
+console.table(instaPosts)
+
+
+// screen capture
+const previewElem = document.querySelector('#preview')
+const videoButton = document.querySelector('video + .button')
+console.log(videoButton)
+
+videoButton.addEventListener('click', async () => {
+    const options = {
+        video: {
+            cursor: 'always'
+        },
+        audio: false,
+    }
+
+    previewElem.srcObject = await navigator.mediaDevices.getDisplayMedia({
+        video: {cursor: 'always'},
+        audio: false,
+    })
+})
