@@ -57,9 +57,23 @@ console.log(harold)
 
 
 // Generate Color
-// 0x - write hex in machine code
+// 0x - write hex for machine code to interpret
 // 16 - base of hex
 const sampleBackground = Math.floor(Math.random() * 0xffffff).toString(16)
 console.log(sampleBackground)
 document.body.style.backgroundColor = `#${sampleBackground}`
 
+const bgText = document.querySelector('.bg-text')
+bgText.textContent = `#${sampleBackground}`
+
+// Copy from clipboard
+const button = document.querySelector('.button')
+const sampleCopy = document.querySelector('.sample-copy').textContent
+
+button.addEventListener('click', () => {
+    copy(sampleCopy)
+    alert('Copied to clipboard 🚀')
+})
+
+const copy = text => navigator.clipboard.writeText(text)
+console.log(copy)
