@@ -20,6 +20,7 @@ body {
     margin: 1em auto;
     vertical-align: middle;
     -webkit-transform: scale(0.5);
+    transform: scale(0.5);
 }
 
 .squircle > * {
