@@ -1,5 +1,6 @@
 const list = document.querySelector('ul')
 const cardCount = 64
+const cardBackground = Math.floor(Math.random() * 0xffffff).toString(16)
 
 const createCard = () => {
     const listItem = document.createElement('li')
@@ -7,6 +8,7 @@ const createCard = () => {
     card.className = 'card'
     listItem.appendChild(card)
     list.appendChild(listItem)
+    card.style.backgroundColor = `#${cardBackground}`
 }
 
 Array(cardCount).fill().forEach(() => createCard())
