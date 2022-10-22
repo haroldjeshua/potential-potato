@@ -17,5 +17,7 @@
 14. panahon-vanilla: weather app with pure js and using weather api (openweather) & gmaps/places api + nodejs (separate repo to run in server -> panahon-web)
 15. tiyubibo: vanilla carousel/slideshow w scrollsnap + vanillajs
 16. js-one-liners:
+17. squircle: for modern cards design
+18. animated-grid: using intersection observer api
 
 https://justforfunnoreally.dev/

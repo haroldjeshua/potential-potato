@@ -1,0 +1,33 @@
+{
+  "name": "for-fun",
+  "version": "1.0.0",
+  "description": "1. eyeball: mouse hover effect\r 2. eye-candy-scroll: subtle, animation on scroll\r 3. esveegee: svg animated icons + animated illustrations w/ delay\r 4. es-pi-en: send push notifications w js on phone / web\r 5. skeleton-loading: display preloading of huge chunk of data for slow connections\r 6. css-one-liners: handful of usefull css snippets for your proj\r 7. grid-use-cases: testing css grid samples and experimenting\r 8. kalkyula-vanilla: simple calculator in vanilla js\r 9. multistep-form: replicate and debugging multi-step-form sample from codepen for js and css animation\r 10. fluid-navbar: classic navbar with plain css\r 11. dark-mode: dark mode icons with animation + alpine test for markup theme switching\r 12. ta-da: a multi-list to-do list, vanillajs + scss\r 13. theme-switch: in-depth learning for theme switching + using postcss and vite for build setup\r 14. panahon-vanilla: weather app with pure js and using weather api (openweather) & gmaps/places api + nodejs (separate repo to run in server -> panahon-web)\r 15. tiyubibo: vanilla carousel/slideshow w scrollsnap + vanillajs\r 16. js-one-liners:\r 17. squircle: for modern cards design\r 18. animated-grid: using intersection observer api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haroldjeshua/potential-potato.git"
+  },
+  "keywords": [
+    "experiment",
+    "playground",
+    "vanilla",
+    "testapps",
+    "snippets"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haroldjeshua/potential-potato/issues"
+  },
+  "homepage": "https://github.com/haroldjeshua/potential-potato#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.12",
+    "normalize.css": "^8.0.1",
+    "postcss": "^8.4.18",
+    "postcss-cli": "^10.0.0"
+  }
+}

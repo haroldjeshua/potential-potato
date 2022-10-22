@@ -1,0 +1,26 @@
+.grid {
+    width: 50vmin;
+    height: 50vmin;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    padding: 1em;
+    border-radius: 16px;
+    overflow: auto;
+    list-style: none;
+    transition: all .5s ease;
+}
+
+li {
+    padding: 0;
+}
+
+.card {
+    transform: scale(calc(0.25 + (var(--shown, 1) * 0.75)));
+    transition: all .5s ease;
+    background-color: rgb(195, 0, 255);
+    border-radius: 15px;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px, 0 2px #333;
+    border: 3px solid #333;
+    aspect-ratio: 1;
+}
