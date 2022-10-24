@@ -19,5 +19,6 @@
 16. js-one-liners:
 17. squircle: for modern cards design
 18. animated-grid: using intersection observer api
-
+19. linear-card: card hover animation from linear.app website (reverse-engineering)
+ 
 https://justforfunnoreally.dev/
