@@ -29,9 +29,6 @@
 		rgba(255, 255, 255, 0.25) 120%
 	) var(--bg-x) var(--bg-y) / 300%;
 }
-* {
-	box-sizing: border-box;
-}
 html {
 	font-size: 10px;
 }
