@@ -6,9 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "watch:css": "postcss src/input.css -o style.css",
+    "build:css": "postcss src/input.css -o style.css",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.18",
+    "postcss-cli": "^10.0.0",
     "vite": "^3.2.3"
   }
 }
