@@ -15,21 +15,38 @@
     <div class="container">
       <div class="row">
         <input id="searchInput" type="text" placeholder="Search" />
-        <div class="icon">
-          <i class="fa fa-search"></i>
-          <i class="fa-solid fa-xmark"></i>
+        <div class="action-wrapper">
+          <div class="icon search">
+            <i class="fa fa-search"></i>
+          </div>
+          <div class="icon delete">
+            <i class="fa-solid fa-delete-left"></i>
+          </div>
         </div>
       </div>
     </div>
 
     <script>
-      const searchButton = document.querySelector(".icon");
-      const speechSample = "Searching";
-
-      const utterance = new SpeechSynthesisUtterance(speechSample);
+      const searchButton = document.querySelector(".icon.search");
+      const clearButton = document.querySelector(".icon.delete");
+      const speechIntro = "Searching for ";
 
       searchButton.addEventListener("click", () => {
-        window.speechSynthesis.speak(utterance);
+        const input = document.querySelector("input");
+        let text = input.value;
+
+        if (input.value) {
+          console.log(text);
+          const utterance = new SpeechSynthesisUtterance(speechIntro + text);
+          window.speechSynthesis.speak(utterance);
+        } else {
+          console.log("empty");
+          return;
+        }
+      });
+
+      clearButton.addEventListener("click", () => {
+        document.querySelector("input").value = "";
       });
     </script>
   </body>

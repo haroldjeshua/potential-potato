@@ -3,6 +3,8 @@
 }
 
 body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: #000;
   display: flex;
   flex-direction: column;
@@ -38,6 +40,11 @@ body {
   transition: all 0.3s;
 }
 
+.action-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+}
 .icon {
   display: flex;
   align-items: center;
@@ -47,6 +54,8 @@ body {
   margin: 8px;
   border-radius: 50%;
   background-color: #fff;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
 .icon i {
@@ -54,8 +63,11 @@ body {
   color: #333;
 }
 
-.icon .fa-xmark {
+.icon.delete {
   opacity: 0;
+  background-color: transparent;
+  position: absolute;
+  right: 44px;
 }
 
 .container:hover input,
@@ -66,14 +78,14 @@ input:not(:placeholder-shown) {
   padding-left: 1.5rem;
 }
 
-.container:hover .fa-xmark,
-input:focus ~ .icon .fa-xmark,
-input:not(:placeholder-shown) ~ .icon .fa-xmark {
+.container:hover .icon.delete,
+input:focus ~ .icon.delete,
+input:not(:placeholder-shown) ~ .icon.delete {
   opacity: 1;
 }
-
+/* 
 .container:hover .fa-search,
 input:focus ~ .icon .fa-search,
 input:not(:placeholder-shown) ~ .icon .fa-search {
   opacity: 0;
-}
+} */
