@@ -14,12 +14,23 @@
   <body>
     <div class="container">
       <div class="row">
-        <input type="text" placeholder="Search" />
+        <input id="searchInput" type="text" placeholder="Search" />
         <div class="icon">
           <i class="fa fa-search"></i>
           <i class="fa-solid fa-xmark"></i>
         </div>
       </div>
     </div>
+
+    <script>
+      const searchButton = document.querySelector(".icon");
+      const speechSample = "Searching";
+
+      const utterance = new SpeechSynthesisUtterance(speechSample);
+
+      searchButton.addEventListener("click", () => {
+        window.speechSynthesis.speak(utterance);
+      });
+    </script>
   </body>
 </html>
