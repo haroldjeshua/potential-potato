@@ -10,6 +10,7 @@
       src="https://kit.fontawesome.com/4727b169b8.js"
       crossorigin="anonymous"
     ></script>
+    <script src="app.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -25,29 +26,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      const searchButton = document.querySelector(".icon.search");
-      const clearButton = document.querySelector(".icon.delete");
-      const speechIntro = "Searching for ";
-
-      searchButton.addEventListener("click", () => {
-        const input = document.querySelector("input");
-        let text = input.value;
-
-        if (input.value) {
-          console.log(text);
-          const utterance = new SpeechSynthesisUtterance(speechIntro + text);
-          window.speechSynthesis.speak(utterance);
-        } else {
-          console.log("empty");
-          return;
-        }
-      });
-
-      clearButton.addEventListener("click", () => {
-        document.querySelector("input").value = "";
-      });
-    </script>
   </body>
 </html>
