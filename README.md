@@ -1,4 +1,5 @@
 # For fun:
+
 ## playground for experimentation on web
 
 1. eyeball: mouse hover effect
@@ -20,5 +21,6 @@
 17. squircle: for modern cards design
 18. animated-grid: using intersection observer api
 19. linear-card: card hover animation from linear.app website (reverse-engineering)
- 
+20. gh-card: replicating github universe card/s
+
 https://justforfunnoreally.dev/
