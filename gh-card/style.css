@@ -47,9 +47,9 @@ a {
 
 .gh-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   grid-template-rows: 1fr;
-  gap: 6.4rem;
+  gap: 4.4rem;
   padding: clamp(8px, 8vw, 12vw);
 }
 
@@ -131,4 +131,45 @@ a {
 
 .gh-card:hover::before {
   opacity: 1;
+}
+
+.gh-card__subtitle {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.gh-card__title {
+  font-size: 3rem;
+  margin: 2rem 0;
+}
+.gh-card__lead {
+  color: rgb(196, 196, 196);
+  margin: 0 0 4rem;
+}
+.gh-card__actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  all: unset;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-flat:hover {
+  opacity: 0.8;
+}
+
+.btn-contained {
+  background-color: #343b43;
+  padding: 1rem 2rem;
+  border-radius: 5px;
 }
