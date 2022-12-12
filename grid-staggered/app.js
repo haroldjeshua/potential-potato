@@ -15,15 +15,23 @@ const colors = [
   "hsl(192, 60%, 69%)",
 ];
 
-let count = -1;
+let toggled = false;
+
+const toggle = () => {
+  toggled = !toggled;
+
+  document.body.classList.add("toggled");
+};
 
 const handleOnClick = (index) => {
   //   count += 1;
-  count = count + 1;
+  //   count = count + 1;
+  toggle();
 
   anime({
     targets: ".tile",
-    backgroundColor: colors[count % (colors.length - 1)],
+    // backgroundColor: colors[count % (colors.length - 1)],
+    opacity: toggled ? 0 : 1,
     delay: anime.stagger(50, {
       grid: [columns, rows],
       from: index,
