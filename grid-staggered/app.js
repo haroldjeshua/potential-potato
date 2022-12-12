@@ -24,6 +24,10 @@ const handleOnClick = (index) => {
   anime({
     targets: ".tile",
     backgroundColor: colors[count % (colors.length - 1)],
+    delay: anime.stagger(50, {
+      grid: [columns, rows],
+      from: index,
+    }),
   });
 };
 

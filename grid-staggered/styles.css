@@ -1,3 +1,8 @@
+:root {
+  --gradient1: hsl(265, 100%, 46%);
+  --gradient2: hsl(340, 82%, 59%);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,7 +10,18 @@
 }
 
 body {
-  background-color: hsl(0, 0%, 8%);
+  background: linear-gradient(
+    to right,
+    var(--gradient1),
+    var(--gradient2),
+    var(--gradient1)
+  );
+  background-size: 200%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+
+  animation: bg-pan 10s linear infinite;
 }
 
 .tiles {
@@ -18,5 +34,28 @@ body {
 }
 
 .tile {
-  outline: 1px solid white;
+  position: relative;
+  cursor: pointer;
+  /* outline: 1px solid white; */
+}
+
+.tile::before {
+  content: "";
+  background-color: hsl(0, 0%, 8%);
+  position: absolute;
+  inset: 0.5px;
+}
+
+.tile:hover {
+  opacity: 0.95;
+}
+
+@keyframes bg-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
 }
